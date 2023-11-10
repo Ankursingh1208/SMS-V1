@@ -1,0 +1,31 @@
+<h1>Student Detail</h1>
+<button class="btnShow" (click) = "showStudents()">Show Student</button>
+
+<table *ngIf="students.length>0">
+    <thead>
+        <th>Roll no</th>
+        <th>Name</th>
+        <th>Percentage</th>
+        <th>No Of Attempts</th>
+        <th>Subjects</th>
+        <th>Action</th> 
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students" >
+            <td>{{s.rollno}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.percentage}}</td>
+            <td>{{s.noOfAttemps}}</td>
+            <td>
+                 <ul *ngFor="let sub of s.subjectLearning"> 
+                    <li> {{sub}}</li> 
+                 </ul>
+            </td>
+            <td>
+                <button class="btnDelete" (click) = "deleteStudent(s.rollno)"> Delete </button> &nbsp;
+                <button  class="btnUpdate"  (click) = "updateStudent(s)" >Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<span [class]="colorClass">{{ deletionMessage }}</span>

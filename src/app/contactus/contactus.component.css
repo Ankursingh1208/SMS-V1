@@ -1,0 +1,40 @@
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    margin: 0 auto;
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    color: #3498db;
+}
+
+
+p {
+    text-align: center;
+    color: #555;
+}
+

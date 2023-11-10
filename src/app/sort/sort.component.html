@@ -1,0 +1,30 @@
+<h1>Sort Function</h1>
+<section  class="sort-section">
+    <label class="heading">SortBy criteria </label><br>
+    <div class="r1">
+    <input type="radio"  name="answer" (click)="sortByPercentage()" >Percentage <br>
+    <input type="radio"   name="answer" (click)=" sortByAttempts()">NoOfAttempts<br>
+    <input type="radio" name="answer" (click)=" sortByNoOfsubLearning()">SubjectsLearning<br>
+    
+    </div></section>
+    <div class ="answers">
+        <table>
+    <thead>
+        <th>Roll no</th>
+        <th>Name</th>
+        <th>Percentage</th>
+        <th>No Of Attempts</th>
+        <th>Subjects</th>
+  
+    </thead>
+    <tbody>
+    <tr *ngFor="let sort of percentages">
+        <td>{{sort.rollno}}</td>
+        <td>{{sort.name}}</td>
+        <td>{{sort.percentage}}</td>
+        <td>{{sort.noOfAttemps}}</td>
+        <td>{{sort.subjectLearning}}</td>
+    </tbody>
+    </table>
+    
+    </div>
